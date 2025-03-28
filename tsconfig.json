@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+      "target": "ES2020",                     // Define o alvo de compilação para ES2020
+      "module": "ESNext",                    // Usa o sistema de módulos ESNext (ESModules)
+      "rootDir": "./",                       // Diretório raiz do projeto
+      "outDir": "./dist",                    // Diretório de saída para os arquivos compilados
+      "moduleResolution": "node",           // Resolve módulos no estilo Node.js
+      "esModuleInterop": true,              // Permite interoperabilidade com CommonJS
+      "forceConsistentCasingInFileNames": true, // Garante consistência no uso de maiúsculas/minúsculas
+      "strict": false,                       // Ativa todas as verificações estritas do TypeScript
+      "skipLibCheck": true,                 // Ignora a verificação de tipos em arquivos de declaração
+      "baseUrl": "./",                      // Define o diretório base para resolução de caminhos
+      "paths": {                            // Configura atalhos para caminhos
+        "@controllers/*": ["controllers/*"],
+        "@usecases/*": ["usecases/*"],
+        "@middlewares/*": ["middlewares/*"],
+        "@models/*": ["models/*"]
+      }
+    },
+    "include": [
+      "controllers/**/*.ts",                // Inclui todos os arquivos TypeScript em controllers
+      "usecases/**/*.ts",                   // Inclui todos os arquivos TypeScript em usecases
+      "middlewares/**/*.ts",                // Inclui todos os arquivos TypeScript em middlewares
+      "models/**/*.ts"                      // Inclui todos os arquivos TypeScript em models
+    ],
+    "exclude": [
+      "node_modules",                       // Exclui a pasta node_modules
+      "dist"                                // Exclui a pasta de saída
+    ]
+  }
