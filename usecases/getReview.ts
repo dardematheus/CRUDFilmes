@@ -1,16 +1,10 @@
 import prisma from '../models/prismaClient.ts';
 
 export async function getReview(id: number, user: string, movie: string) {
-    const review = await prisma.review.findMany({
+    const review = await prisma.review.findUnique({
         where: {
             id: id,
-            user: {
-                name: user
-            },
-            movie: {
-                title: movie
-            }
-        }
-    })
+        },
+    });
     return review;
 }

@@ -13,7 +13,6 @@ router.post('/addReview', async (req, res) => {
         res.status(200).send(`Review added with success`);
     }
     catch(err) {
-        console.log(`Cannot add review`);
         res.status(err).send(`Cannot add review`);
     }
 });
@@ -26,7 +25,6 @@ router.get('/getReview', async (req, res) => {
         res.status(200).send(review);
     } 
     catch(err) {
-        console.log(`Cannot get review`);
         res.status(err).send(`Cannot get review`);
     }
 });
@@ -39,9 +37,8 @@ router.delete('/deleteReview', async (req, res) => {
         res.status(200).send(`Review deleted with success`);
     }
     catch(err) {
-        console.log(`Cannot delete review`);
         res.status(err).send(`Cannot delete review`);
     }
-})
+});
 
 export default router;

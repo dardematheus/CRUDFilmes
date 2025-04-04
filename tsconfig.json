@@ -1,7 +1,10 @@
 {
     "compilerOptions": {
+      "allowImportingTsExtensions": true,
+      "verbatimModuleSyntax": true,
+      "noEmit": true,
       "target": "ES2020",                     // Define o alvo de compilação para ES2020
-      "module": "ESNext",                    // Usa o sistema de módulos ESNext (ESModules)
+      "module": "ESNext",                   // Usa o sistema de módulos ESNext (ESModules)
       "rootDir": "./",                       // Diretório raiz do projeto
       "outDir": "./dist",                    // Diretório de saída para os arquivos compilados
       "moduleResolution": "node",           // Resolve módulos no estilo Node.js
